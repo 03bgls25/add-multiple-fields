@@ -1,0 +1,541 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Multiple Field Sample</title>
+    <!-- attachment of bootstrap stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- attachment of bootstrap-datepicker stylesheet -->
+    <link href="css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+    	<!--start of search flight panel-->
+        <div class="col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h1 class="panel-title">
+                        <i class="fa fa-plane"></i>Search Flights</h1>
+                </div>
+                <div class="panel-body">
+                    <!--start of selection of International and Domestic-->
+                    <div class="form-group">
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-default active">International</a> <a href="#" class="btn btn-default">
+                                Domestic</a>
+                        </div>
+                    </div>
+                    <!--start of selection of International and Domestic-->
+                    <!--start of selection of Ways-->
+                    <div class="form-group">
+                        <ul class="nav nav-pills" role="tablist">
+                            <li role="presentation" class="active"><a href="#oneway" aria-controls="OneWay" role="tab"
+                                data-toggle="tab">One Way</a></li>
+                            <li role="presentation"><a href="#twoway" aria-controls="TwoWay" role="tab" data-toggle="tab">
+                                Two Way</a></li>
+                            <li role="presentation"><a href="#multicity" aria-controls="MultiCity" role="tab"
+                                data-toggle="tab">Multi City/ Stop Over </a></li>
+                        </ul>
+                    </div>
+                    <!--end of selection of Ways-->
+                    <!--start of selected tab-contnet-->
+                    <div class="tab-content">
+                        <!--start of One way-->
+                        <div role="tabpanel" class="tab-pane active" id="oneway">
+                            <form id="frmOneWay" name="frmOneWay">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>
+                                            From</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                            <select id="oneWayfromAirport" name="oneWayfromAirport" class="form-control">
+                                            </select>
+                                        </div>
+                                        <span class="help-block" id="errorOneWayMsgfromAirport" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>
+                                            To</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-location-arrow"></i></span>
+                                            <select id="oneWaytoAirport" name="oneWaytoAirport" class="form-control">
+                                            </select>
+                                        </div>
+                                        <span class="help-block" id="errorMsgOneWaytoAirport" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Departure</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                            <input type="text" id="OneWayDepartureDate" name="OneWayDepartureDate" class="form-control" />
+                                        </div>
+                                        <span class="help-block" id="errorOneWayDepartureDate" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>
+                                            Adult (12+ YRS)</label>
+                                        <select class="form-control input-sm">
+                                            <option value="">- Select -</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>
+                                            Child (2-11 YRS)</label>
+                                        <select class="form-control input-sm">
+                                            <option value="">- Select -</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>
+                                            Infant (0-2 YRS)</label>
+                                        <select class="form-control input-sm">
+                                            <option value="">- Select -</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>
+                                            Class</label>
+                                        <select class="form-control input-sm">
+                                            <option value="">- Select -</option>
+                                            <option value="e">Economy</option>
+                                            <option value="pe">Premium Economy</option>
+                                            <option value="b">Business</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="submit" id="btnOneWay" class="btn btn-lg btn-primary"
+                                            value="Search Flight" />
+                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+                        <!--end of One way-->
+                        <!--start of Two way-->
+                        <div role="tabpanel" class="tab-pane" id="twoway">
+                            <form name="frmTwoWay">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>
+                                            From</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                            <select id="twoWayFromAirport" name="twoWayFromAirport" class="form-control">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>
+                                            To</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-location-arrow"></i></span>
+                                            <select id="twoWayToAirport" name="twoWayToAirport" class="form-control">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Departure</label>
+                                        <div class="input-group date">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                            <input type="text" id="twoWayDepartureDate" name="twoWayDepartureDate" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Arrival</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                            <input type="text" id="twoWayArrivalDate" name="twoWayArrivalDate" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>
+                                            Adult (12+ YRS)</label>
+                                        <select class="form-control input-sm">
+                                            <option value="">- Select -</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>
+                                            Child (2-11 YRS)</label>
+                                        <select class="form-control input-sm">
+                                            <option value="">- Select -</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>
+                                            Infant (0-2 YRS)</label>
+                                        <select class="form-control input-sm">
+                                            <option value="">- Select -</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>
+                                            Class</label>
+                                        <select class="form-control input-sm">
+                                            <option value="">- Select -</option>
+                                            <option value="e">Economy</option>
+                                            <option value="pe">Premium Economy</option>
+                                            <option value="b">Business</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="submit" id="btnTwoWay" data-toggle="modal" data-target="#loading" class="btn btn-lg btn-primary"
+                                            value="Search Flight" />
+                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+                        <!--end of Two way-->
+                        <!--start of Multi City-->
+                        <div role="tabpanel" class="tab-pane" id="multicity">
+                            <form name="frmMultiWay">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <div class="form-group">
+                                        <label>
+                                            From</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                            <select id="multiWayFromAirport" name="multiWayFromAirport" class="form-control">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="form-group">
+                                        <label>
+                                            To</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-location-arrow"></i></span>
+                                            <select id="multiWayToAirport" name="multiWayToAirport" class="form-control">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div class="form-group">
+                                        <label>
+                                            Departure</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                            <input type="text" id="multiCityDepartureDate" name="multiCityDepartureDate" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Added Field With Javascript-->
+                            <div id="newRows">
+                            </div>
+                            <!-- / Added Field With Javascript-->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <a href="javascript:void(0)" class="btn btn-default" id="btnAdd">Add City</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <div class="form-group">
+                                        <label>
+                                            Adult (12+ YRS)</label>
+                                        <select class="form-control input-sm">
+                                            <option value="">- Select -</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div class="form-group">
+                                        <label>
+                                            Child (2-11 YRS)</label>
+                                        <select class="form-control input-sm">
+                                            <option value="">- Select -</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div class="form-group">
+                                        <label>
+                                            Infant (0-2 YRS)</label>
+                                        <select class="form-control input-sm">
+                                            <option value="">- Select -</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div class="form-group">
+                                        <label>
+                                            Class</label>
+                                        <select class="form-control input-sm">
+                                            <option value="">- Select -</option>
+                                            <option value="e">Economy</option>
+                                            <option value="pe">Premium Economy</option>
+                                            <option value="b">Business</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <input type="button" id="btnMultiWay" data-toggle="modal" data-target="#loading"
+                                            class="btn btn-lg btn-primary" value="Search Flight" />
+                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+                        <!--end of Multi City-->
+                    </div>
+                    <!--end of selected tab-contnet-->
+                </div>
+            </div>
+        </div>
+        <!--end of search flight panel-->
+    </div>            
+    <!-- attachment of jquery library -->
+    <script src="js/jquery/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- attachment of bootstrap-datepicker JS -->
+    <script src="js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+    <!-- form Control jQuery Script -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            /*---------------------- jQuery Method To Add fields ----------------------------------*/
+            newRows = $("#newRows");
+            btnAdd = $("#btnAdd")
+            maxFields = 4;
+            x = 0;
+            //Jquery to Add on btn Click
+            $(btnAdd).click(function () {
+                if (x < maxFields) {
+                    x++;
+
+                    //string builder for added fields
+                    addedRow = "<div class=\"row\" id=\"addedRow\">";
+                    addedRow += "<div class=\"col-xs-4\">";
+                    addedRow += "<div class=\"form-group\">";
+                    addedRow += "<div class=\"input-group\">";
+                    addedRow += "<span class=\"input-group-addon\"><i class=\"fa fa-map-marker\"></i></span>";
+                    // addedRow += "<select class=\"form-control AddedmultiCityfromCountry" + x + "\">";
+                    addedRow += "<select class=\"form-control \" id=\"AddedmultiCityfromCountry" + x + "\" onchange=ChangeFromMe('" + x + "')>";
+                    addedRow += "</select>";
+                    addedRow += "</div>";
+                    addedRow += "</div>";
+                    addedRow += "</div>";
+                    addedRow += "<div class=\"col-xs-4\">";
+                    addedRow += "<div class=\"form-group\">";
+                    addedRow += "<div class=\"input-group\">";
+                    addedRow += "<span class=\"input-group-addon\"><i class=\"fa fa-location-arrow\"></i></span>";
+                    //addedRow += "<select class=\"form-control AddedmultiCitytoCountry" + x + "\">";
+                    addedRow += "<select class=\"form-control \" id=\"AddedmultiCitytoCountry" + x + "\">"; // onchange=ChangeToMe('" + x + "')>";
+                    addedRow += "</select>";
+                    addedRow += "</div>";
+                    addedRow += "</div>";
+                    addedRow += "</div>";
+                    addedRow += "<div class=\"col-xs-3\">";
+                    addedRow += "<div class=\"form-group\">";
+                    addedRow += "<div class=\"input-group\">";
+                    addedRow += "<span class=\"input-group-addon\"><i class=\"fa fa-calendar\"></i></span>";
+                    addedRow += "<input type=\"text\" class=\"form-control AddedmultiCityDepartureDate" + x + "\" />";
+                    addedRow += "</div>";
+                    addedRow += "</div>";
+                    addedRow += "</div>";
+                    addedRow += "<div class=\"col-xs-1\">";
+                    addedRow += "<div class=\"form-group text-left\">";
+                    addedRow += "<a href=\"javascript:void(0)\" class=\"btn btn-default\" id=\"btnRemove\"><i class=\"fa fa-remove\"></i></a>";
+                    addedRow += "</div>";
+                    addedRow += "</div>";
+                    addedRow += "</div>";
+
+                    $(newRows).append(addedRow);
+                    $('.AddedmultiCityDepartureDate' + x + '').datepicker({
+                        format: 'mm-dd-yyyy',
+                        startDate: today
+                    });
+
+                    //hide Add button after Max Fields
+                    if (x == maxFields) {
+                        $(btnAdd).hide();
+                    }
+                }
+                LoadAirportOnAddCity(x);
+            });
+
+            //Jquery to Remove Fields
+            $(newRows).on("click", "#btnRemove", function () {
+                $(btnAdd).not(":visible").show();
+                $(this).closest("div#addedRow").remove();
+                x--;
+            })
+
+            //Use of Bootstrap DatePicker
+            var today = new Date();
+            $('#OneWayDepartureDate').datepicker({
+                format: 'mm-dd-yyyy',
+                startDate: today,
+                autoclose: true
+            });
+
+
+            var twoWayArrivalDate = $('#twoWayArrivalDate').datepicker({ autoclose: true, format: 'mm-dd-yyyy' });
+            var twoWayDepartureDate = $('#twoWayDepartureDate').datepicker({
+                autoclose: true,
+                format: 'mm-dd-yyyy',
+                startDate: today
+            }).on('changeDate', function (event) {
+                twoWayArrivalDate.datepicker("setStartDate", event.date);
+            });
+
+
+            $('#multiCityDepartureDate').datepicker({
+                format: 'mm-dd-yyyy',
+                startDate: today,
+                autoclose: true
+            });
+
+        });
+    </script>
+</body>
+</html>
