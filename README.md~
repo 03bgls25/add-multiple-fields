@@ -1,0 +1,6 @@
+# Search Form for One way, Two way and Multi City / Stop Over
+Search form with one way, two way and multi city search functionality
+**Feature available**
+- [x] Bootstrap tabmenu for one way, two way and multi city.
+- [x] Bootstrap datepicker to select Departure and Arrival Date.
+- [x] Add multiple field of from and to with departure date
